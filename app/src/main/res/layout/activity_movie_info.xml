@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MovieInfo"
+    android:id="@+id/layout_info_movie">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/textInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textInfo"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Adault : "
+        android:id="@+id/text_adalt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_adalt"
+        style="@style/textInfo"
+        android:text="Description"
+        android:gravity="center"
+        android:id="@+id/text_des"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/text_des"
+        app:layout_constraintBottom_toTopOf="@id/rec_films_rec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:id="@+id/real_des"
+        tools:text="Descripe what is film and what is the action "/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_des"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:id="@+id/rec_films_rec"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rec_films_rec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/textInfo"
+        android:text="Vote Average : "
+        android:id="@+id/vote_movie"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
